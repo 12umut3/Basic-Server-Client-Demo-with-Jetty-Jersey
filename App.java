@@ -11,7 +11,7 @@ import org.glassfish.jersey.servlet.ServletContainer;
 public class App {
 
     public static void main(String[] args) throws Exception {
-
+        //ResourceConfig (Jersey) inherit from Application and gives a new configuration without custom properties
         ResourceConfig config = new ResourceConfig();
         config.packages("demo2");
         ServletHolder servlet = new ServletHolder(new ServletContainer(config));
