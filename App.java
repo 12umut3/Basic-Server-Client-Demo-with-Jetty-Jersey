@@ -18,12 +18,12 @@ public class App {
         //It holds name, parameters and some states of javax.servlet.Servlet instance. 
         ServletHolder servlet = new ServletHolder(new ServletContainer(config));
 
-
+        //Set up and start Jetty.
         Server server = new Server(2222);
         //ServletContextHandler (Jetty) takes the arguments HandlerContainer and contextPath. 
         //It gives Servlet context and extends ContextHandler.
         ServletContextHandler context = new ServletContextHandler(server, "/*");
-        //convenience method to add a Servlet.
+        //add the Jersey ServletContainer to the Jetty servlet holder.Joins Jersey with Jetty
         context.addServlet(servlet, "/*");
 
         try {
