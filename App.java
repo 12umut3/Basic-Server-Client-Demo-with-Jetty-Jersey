@@ -19,6 +19,7 @@ public class App {
 
 
         Server server = new Server(2222);
+        //ServletContextHandler (Jetty) takes the arguments HandlerContainer and contextPath. It gives Servlet context and is and extends ContextHandler.
         ServletContextHandler context = new ServletContextHandler(server, "/*");
         context.addServlet(servlet, "/*");
 
