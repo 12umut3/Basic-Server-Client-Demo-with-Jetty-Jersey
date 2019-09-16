@@ -17,7 +17,7 @@ public class Resource {
 
         return "Hello World!_!_!_!";
     }
-
+    //@QueryParam for the given name of the parameter in the URI, and assign this to the following variable String name. By typing ?name=Umut at the end of the URI, you assign the variable name to Umut.
     @GET
     @Path("param")
     @Produces(MediaType.TEXT_PLAIN)
@@ -25,7 +25,7 @@ public class Resource {
 
         return "Hello, " + name;
     }
-
+    //http://localhost:2222/home/path/Umut this method will return "Hello, Umut" to the browser.
     @GET
     @Path("path/{var}")
     @Produces(MediaType.TEXT_PLAIN)
